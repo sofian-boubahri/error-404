@@ -1,5 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
+
+.text-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+
+h1{
+    user-select: none;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    color:white;
+    font-size: 150px;
+    opacity: 0; 
+    animation: fadeIn 0.5s forwards; 
+}
+
+h1:hover{
+  opacity: 0.9;
+  text-shadow: 0px -5px #ec2225, 0px 5px #00c2cb, -5px 0px #ec2225, 5px 0px #00c2cb;
+}
+
+h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e0ffff;
+  z-index: -1;
+}
+
+h1:hover::before{
+  animation: animate 12ms ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes animate{
+  0%, 100%{
+    top: -7px;
+    left: 0;
+    opacity: 1;
+  }
+  20%{
+    top: 0;
+    left: -10px;
+    opacity: 0.7;
+  }
+  40%{
+    top: 7px;
+    left: 0;
+    opacity: 0.2;
+  }
+  60%{
+    top: 0;
+    left: 10px;
+    opacity: 0.3;
+  }
+  80%{
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Devient visible */
+    }
+}
 video {
     width: 100vw; 
     height: 100vh; 
@@ -8,4 +86,15 @@ video {
     top: 0;
     left: 0;
     z-index: -1;  
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 100px; /* Taille de police plus petite sur mobile */
+    }
+
+    .back-button {
+        font-size: 16px; /* Ajuster la taille du bouton */
+    }
 }
