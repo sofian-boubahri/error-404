@@ -1,2 +1,2 @@
 # Error 404
-This project features a custom 404 error page that enhances user experience with a looping background video of TV static. It provides a creative alternative to the standard error message, encouraging users to return to the homepage.
+Ce projet propose une page d'erreur 404 personnalisée qui améliore l'expérience utilisateur grâce à une vidéo de fond en boucle représentant des interférences télévisuelles. Elle offre une alternative créative au message d'erreur standard et incite les utilisateurs à revenir à la page d'accueil.
